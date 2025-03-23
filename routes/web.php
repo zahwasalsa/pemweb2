@@ -3,12 +3,16 @@
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
-Route::get('/home', function () {
-    return 'ini halaman home';
+Route::get('/', function () {
+    return view('web.homepage');
 });
 
-Route::get('/chat', function () {
-    return 'ini halaman pesan';
+Route::get('/product', function () {
+    return view('web.halamanproduct');
+})->name('product');
+
+Route::get('/kategori', function () {
+    return view('web.halkategori');
 });
 
 Route::get('/keranjang', function () {
